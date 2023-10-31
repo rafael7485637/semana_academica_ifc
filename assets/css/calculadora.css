@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1140px;
+    max-width: 100%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+}
+
+body{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff0099;
+}
+
+nav h1 {
+    float: left;
+}
+
+nav h1 a img {
+    width: 100px;
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    float: left;
+    padding: 35px 15px;
+}
+
+nav ul li a {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    /* margin: 15px; */
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: coral;
+    color: black;
+    background-color: #66ffff;
+    width: 375px;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.32%;}
+.col-5 { width: 41.65%;}
+.col-6 {width: 49.98%;}
+.col-7 {width: 58.31%;}
+.col-8 {width: 66.64%;}
+.col-9 {width: 74.97%;}
+.col-10 {width: 83.3%;}
+.col-11 {width: 91.63%;}
+.col-12 {width: 100%;}
+
+h4{
+    display: inline;
+}
+
+
+div {
+    margin: 0px 10px 20px 5px;
+    align-items: center;
+}
+
+.title, .title2{
+display: flex;
+}
+
+.title h4{
+    margin-right: 200px;
+    margin-left: 10px;
+}
+
+.title2 h4{
+    
+    margin-right: 200px;
+    margin-left: 10px;
+}
+ 
+div input{
+  margin-bottom: 15px;
+}

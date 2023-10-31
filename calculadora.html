@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora de orçamento</title>
+    <link rel="stylesheet" href="assets/css/calculadora.css">
+
+    <script src="js/calculadora.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <h1><a href="index.html">
+                    <img src="assets/img/logotipo.jpg" alt="logotipo da semana acadêmica">
+                </a>
+            </h1>
+            <ul>
+                <li><a href="#jogos">jogos Eletrônicos</a></li>
+                <li><a href="#Apoio">Apoiadores</a></li>
+                <li><a href="cronograma.html">cronograma</a></li>
+                <li><a href="https://videira.ifc.edu.br/tecnico-informatica/sci-semana-academica-da-ciencia-da-computacao-e-informatica/" target="_blank">fotos</a></li>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe8q_YT8unX1__h57OHXDcQyWdFtbWxUno8VuErhHajIeO6vg/closedform" target="_blank">maratona</a></li>
+                <li><a href="index.html">home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <form id="calculadora">
+
+        <fieldset align="left" ; style = "width: 70%; margin: 0px auto;">
+
+            <h1>calculadora de orçamento para o evento SCI</h1>
+            <h3>dados do evento</h3>
+
+            numero de participantes <input id="numero_participantes" type="text"readonly>
+
+            <h3>custo de produtos alimenticios</h3>
+
+            <div class="title">
+                <h4>Quantidade por participantes</h4>
+                <h4>Preço por unidade</h4>
+                <h4>Total</h4>
+            </div>
+
+            <div class="container">
+
+                <div class="comida">
+                    <div class="col-3">
+                        <label for="idcafe">café:</label>
+                        <input id="idcafe" name="cafe" type="text"  required>
+
+                        <label for="idbolo">Bolo:</label>
+                        <input id="idbolo" name="bolo" type="text"  required>
+
+                        <label for="idcachorro">Cachorro-quente:</label>
+                        <input id="idcachorro" name="cachorro" type="text"  required>
+                    </div>
+                </div>
+
+                <div class="valor">
+                    <div class="col-3">
+                        <input id="ValorCafe" name="ValorCafe" type="text" required>
+
+                        
+                        <input id="ValorBolo" name="ValorBolo" type="text" required>
+
+                        
+                        <input id="ValorCachorro" name="ValorCachorro" type="text"  required>
+                    </div>
+                </div>
+
+                <div class="totalA">
+                    <div class="col-3">
+                        <input id="idTotal1" type="text"readonly>                      
+                        <input id="idTotal2" type="text" readonly>
+                        <input id="idTotal3" type="text" readonly>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <h3>custo de itens de divulgação</h3>
+
+            <div class="title2">
+                <h4>Quantidade</h4>
+                <h4>Preço por unidade</h4>
+                <h4>total</h4>
+            </div>
+            <div class="container">
+
+                <div class="comida">
+                    <div class="col-3">
+                        <label for="idBanner">Banner:</label>
+
+                        <input id="idBanner" name="Banner" type="text"  required>
+                        <label for="idCrachá">Crachá:</label>
+
+                        <input id="idCrachá" name="Crachá" type="text" required>
+                        <label for="idCamiseta">Camiseta:</label>
+
+                        <input id="idCamiseta" name="Camiseta" type="text"  required>
+                    </div>
+                </div>
+
+                <div class="valor">
+                    <div class="col-3">        
+                        <input id="ValorBanner" name="ValorBanner" type="text"required>
+
+                       
+                        <input id="ValorCrachá" name="ValorCrachá" type="text"required>
+
+                        
+                        <input id="ValorCamiseta" name="ValorCamiseta" type="text"required>
+                    </div>
+                </div>
+
+                <div class="totalB">
+                    <div class="col-3">
+                        <input id="idTotal4" type="text"readonly/>
+                        <input id="idTotal5" type="text"readonly />
+                        <input id="idTotal6" type="text"readonly />
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="calcularTotal(event)">somar</button>
+
+            <h3>custos totais</h3>
+
+            <div class="container">
+                <div class="list1">
+                    <h4>tipo</h4>
+                    <br>
+                    <ul>
+                        <li>produto alimenticios</li>
+                        <li>divulgação</li>
+                        <li>custo total do evento</li>
+                    </ul>
+                </div>
+
+                <div class="totalF">
+                    <h4>total</h4>
+                    <br>
+                    <input id="idtotalF1" type="text" readonly/><br>
+                    <input id="idtotalF2" type="text" readonly/><br>
+                    <input id="idtotalF0" type="text" readonly/><br>
+                </div>
+
+                <div class="totalD">
+                    <h4>dolar</h4>
+                    <br>
+                    <input id="dolarA" type="text" readonly/><br>
+                    <input id="dolarB" type="text" readonly/><br>
+                    <input id="dolarC" type="text" readonly/><br>
+                </div>
+
+                <div class="totalE">
+                    <h4>euro</h4>
+                    <br>
+                    <input id="euroA" type="text" readonly/><br>
+                    <input id="euroB" type="text" readonly/><br>
+                    <input id="euroC" type="text" readonly/><br>
+                </div>
+
+                <button onclick="bottonOrçamento(event)">calcular orçamento</button>
+            </div>
+
+            
+                <form action="https://api.headlessforms.cloud/api/v1/form/TmqQ0ch59B" id="idForm" method="POST">
+                   <input type="button" value="montar texto" onclick="montartexto()">
+                   <textarea name="texto" id="texto" rows="5" cols="70" readonly></textarea>
+                   <input type="submit" value="enviar">
+                </form>
+            
+        </fieldset>
+    </form>
+
+</body>
+
+//https://app.headlessforms.cloud/api/v1/form-submission/nkJtA1ewcj//
